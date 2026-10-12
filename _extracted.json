@@ -1,0 +1,456 @@
+{
+ "traits": [
+  {
+   "name": "Power 1",
+   "rarity": "Common",
+   "id": 1,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 4
+    }
+   ],
+   "icon": "88664551440874",
+   "desc": "Raw strength behind every strike."
+  },
+  {
+   "name": "Power 2",
+   "rarity": "Uncommon",
+   "id": 2,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 6
+    }
+   ],
+   "icon": "88664551440874",
+   "desc": "Strength honed through countless fights."
+  },
+  {
+   "name": "Power 3",
+   "rarity": "Rare",
+   "id": 3,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 8
+    }
+   ],
+   "icon": "88664551440874",
+   "desc": "Every strike lands like a hammer."
+  },
+  {
+   "name": "Swift 1",
+   "rarity": "Common",
+   "id": 4,
+   "buffs": [
+    {
+     "Type": "Attack Speed",
+     "Percent": 6
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 1
+    }
+   ],
+   "icon": "133216444772459",
+   "desc": "Quick hands and quicker feet."
+  },
+  {
+   "name": "Swift 2",
+   "rarity": "Uncommon",
+   "id": 5,
+   "buffs": [
+    {
+     "Type": "Attack Speed",
+     "Percent": 9
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 1
+    }
+   ],
+   "icon": "133216444772459",
+   "desc": "Faster than the eye can follow."
+  },
+  {
+   "name": "Swift 3",
+   "rarity": "Rare",
+   "id": 6,
+   "buffs": [
+    {
+     "Type": "Attack Speed",
+     "Percent": 12
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 1
+    }
+   ],
+   "icon": "133216444772459",
+   "desc": "Gone before the blow even lands."
+  },
+  {
+   "name": "Focus 1",
+   "rarity": "Common",
+   "id": 7,
+   "buffs": [
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 4
+    }
+   ],
+   "icon": "98071291296534",
+   "desc": "A clear mind recovers abilities sooner."
+  },
+  {
+   "name": "Focus 2",
+   "rarity": "Uncommon",
+   "id": 8,
+   "buffs": [
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 7
+    }
+   ],
+   "icon": "98071291296534",
+   "desc": "A sharpened mind that never wastes a moment."
+  },
+  {
+   "name": "Focus 3",
+   "rarity": "Rare",
+   "id": 9,
+   "buffs": [
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 10
+    }
+   ],
+   "icon": "98071291296534",
+   "desc": "Perfect focus, abilities always ready."
+  },
+  {
+   "name": "Fortune",
+   "rarity": "Uncommon",
+   "id": 10,
+   "buffs": [
+    {
+     "Type": "Coins",
+     "Percent": 25
+    },
+    {
+     "Type": "Exp",
+     "Percent": 20
+    },
+    {
+     "Type": "Drop Rate",
+     "Percent": 20
+    }
+   ],
+   "icon": "73474042946248",
+   "desc": "Luck favours the bold."
+  },
+  {
+   "name": "Vitality",
+   "rarity": "Rare",
+   "id": 11,
+   "buffs": [
+    {
+     "Type": "HP",
+     "Percent": 25
+    }
+   ],
+   "icon": "107295931643887",
+   "desc": "A hardened body that endures far more."
+  },
+  {
+   "name": "Hunter",
+   "rarity": "Epic",
+   "id": 12,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 10
+    },
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 5
+    },
+    {
+     "Type": "Attack Speed",
+     "Percent": 10
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 1
+    }
+   ],
+   "icon": "80035925947781",
+   "desc": "Relentless pursuit: hit harder, move faster, recover quicker."
+  },
+  {
+   "name": "Ferocity",
+   "rarity": "Legendary",
+   "id": 13,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 18
+    },
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 8
+    },
+    {
+     "Type": "Attack Speed",
+     "Percent": 14
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 2
+    }
+   ],
+   "icon": "95225901517212",
+   "desc": "Untamed fury in battle, devastating damage at a brutal tempo."
+  },
+  {
+   "name": "Supernova",
+   "rarity": "Exotic",
+   "id": 14,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 24
+    },
+    {
+     "Type": "Cooldown Reduction",
+     "Percent": 12
+    },
+    {
+     "Type": "Attack Speed",
+     "Percent": 20
+    },
+    {
+     "Type": "Walk Speed",
+     "Amount": 3
+    }
+   ],
+   "icon": "86736787770904",
+   "desc": "A star's final blaze, blinding speed in body and mind."
+  },
+  {
+   "name": "Razor Focus",
+   "rarity": "Epic",
+   "id": 15,
+   "buffs": [
+    {
+     "Type": "Critical Chance",
+     "Percent": 13
+    }
+   ],
+   "icon": "112790613734403",
+   "desc": "Every strike finds the weak point."
+  },
+  {
+   "name": "Overkill",
+   "rarity": "Epic",
+   "id": 16,
+   "buffs": [
+    {
+     "Type": "Critical Damage",
+     "Percent": 40
+    }
+   ],
+   "icon": "130697795014955",
+   "desc": "Critical hits land far harder."
+  },
+  {
+   "name": "Sniper",
+   "rarity": "Legendary",
+   "id": 17,
+   "buffs": [
+    {
+     "Type": "Critical Chance",
+     "Percent": 12
+    },
+    {
+     "Type": "Critical Damage",
+     "Percent": 15
+    },
+    {
+     "Type": "Attack Speed",
+     "Percent": 8
+    }
+   ],
+   "icon": "81482293719758",
+   "desc": "Patient, precise, and deadly at any tempo."
+  },
+  {
+   "name": "Deadeye",
+   "rarity": "Exotic",
+   "id": 18,
+   "buffs": [
+    {
+     "Type": "Damage",
+     "Percent": 20
+    },
+    {
+     "Type": "Critical Chance",
+     "Percent": 5
+    },
+    {
+     "Type": "Critical Damage",
+     "Percent": 50
+    }
+   ],
+   "icon": "135161592635556",
+   "desc": "One look, one shot, one devastating crit."
+  }
+ ],
+ "materials": [
+  {
+   "id": 101,
+   "icon": "102816679609155",
+   "name": "Fine Cloth",
+   "tier": "1"
+  },
+  {
+   "id": 102,
+   "icon": "139900035439195",
+   "name": "Shinobi Scroll",
+   "tier": "1"
+  },
+  {
+   "id": 103,
+   "icon": "132113369360174",
+   "name": "Mana Feather",
+   "tier": "2"
+  },
+  {
+   "id": 104,
+   "icon": "109913321338481",
+   "name": "Cursed Finger",
+   "tier": "3"
+  },
+  {
+   "id": 105,
+   "icon": "137498955017283",
+   "name": "Tech Component",
+   "tier": "3"
+  },
+  {
+   "id": 106,
+   "icon": "106984976173853",
+   "name": "Eyeball",
+   "tier": "2"
+  },
+  {
+   "id": 107,
+   "icon": "105954615720624",
+   "name": "Broken Blade",
+   "tier": "2"
+  },
+  {
+   "id": 108,
+   "icon": "132677360974573",
+   "name": "Soul Fragment",
+   "tier": "3"
+  },
+  {
+   "id": 109,
+   "icon": "129315240126806",
+   "name": "SunCore",
+   "tier": "4"
+  },
+  {
+   "id": 110,
+   "icon": "119252600098664",
+   "name": "Magic Pendant",
+   "tier": "4"
+  },
+  {
+   "id": 111,
+   "icon": "99397651593848",
+   "name": "Forbidden Fruit",
+   "tier": "4"
+  },
+  {
+   "id": 112,
+   "icon": "121909246759003",
+   "name": "Waves core",
+   "tier": "3"
+  },
+  {
+   "id": 113,
+   "icon": "99307813365665",
+   "name": "Ghost",
+   "tier": "4"
+  },
+  {
+   "id": 114,
+   "icon": "102515695079682",
+   "name": "Staff of Homa",
+   "tier": "4"
+  },
+  {
+   "id": 115,
+   "icon": "132677360974573",
+   "name": "Shadow Essence",
+   "tier": "2"
+  },
+  {
+   "id": 116,
+   "icon": "104998716462693",
+   "name": "Igris' Crest",
+   "tier": "3"
+  },
+  {
+   "id": 117,
+   "icon": "81773153687520",
+   "name": "Zero Calories Flour",
+   "tier": "1"
+  },
+  {
+   "id": 118,
+   "icon": "99598523775917",
+   "name": "Zero Calories Doughnuts",
+   "tier": "2"
+  },
+  {
+   "id": 119,
+   "icon": "70596224673115",
+   "name": "Shadow's Cloak",
+   "tier": "3"
+  },
+  {
+   "id": 120,
+   "icon": "125555218853069",
+   "name": "Monarch's Blessing",
+   "tier": "4"
+  },
+  {
+   "id": 121,
+   "icon": "111269245025211",
+   "name": "Caprese",
+   "tier": "1"
+  },
+  {
+   "id": 122,
+   "icon": "138199229130273",
+   "name": "Ham",
+   "tier": "2"
+  },
+  {
+   "id": 123,
+   "icon": "78497914687710",
+   "name": "Omurice",
+   "tier": "3"
+  },
+  {
+   "id": 124,
+   "icon": "101954484954876",
+   "name": "Burger",
+   "tier": "4"
+  }
+ ]
+}

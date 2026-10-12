@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080B14">
+<title>Paduk Shop — Farming Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="shell">
+<header class="topbar" id="topbar">
+  <div class="brand"><div class="brand-mark">P</div><div><div class="brand-name">Paduk Shop</div><div class="brand-sub">FARMING_SERVICE / LOG CENTER</div></div></div>
+  <nav class="navlinks" aria-label="Main navigation">
+    <button class="navbtn active" data-page="dashboard">Dashboard</button>
+  </nav>
+  <div class="top-actions"><button class="language" id="langToggle" aria-label="Switch language">TH / EN</button><button class="login-btn" id="loginBtn">LOGIN ↗</button></div>
+</header>
+<main id="app">
+  <section id="loadingState" class="hidden"><div class="page-head"><div><div class="eyebrow">LOADING SERVICE LOG</div><h1 class="page-title skeleton">Loading dashboard content</h1><p class="page-desc skeleton">Loading account and farming status</p></div></div><div class="stats-grid" id="skeletonStats"></div><div class="accounts-grid" id="skeletonCards"></div></section>
+  <section id="dashboardPage">
+    <div class="page-head"><div><div class="eyebrow"><span class="dot pulse"></span> FARMING SERVICE / OVERVIEW</div><h1 class="page-title">ฟาร์มของคุณ <span class="shine">Live Dashboard</span></h1><p class="page-desc">ติดตามสถานะบัญชี ความคืบหน้า และประวัติการฟาร์มได้จากหน้าจอเดียว</p></div><div class="live-indicator"><span class="dot pulse"></span> LIVE MOCK DATA</div></div>
+    <section class="game-picker" id="gamePicker" aria-label="เลือกเกมที่ต้องการดู">
+      <div class="picker-top">
+        <div><div class="picker-kicker"><span class="dot pulse"></span> PADUK SHOP / GAME SELECTOR</div><h2 class="picker-title">เลือกเกมที่ต้องการ <span>FARM</span></h2><p class="picker-desc">เลือกเกมเพื่อเปิดดูรายการฟาร์ม สถานะบัญชี และรายงานความคืบหน้าของเกมนั้น ๆ</p></div>
+        <div class="search-wrap picker-search"><span class="search-icon">⌕</span><input class="field" id="gameSearch" placeholder="Search games..." aria-label="ค้นหาเกม"></div>
+      </div>
+      <div class="game-cards" id="gameCards">
+        <button class="game-select-card" data-select-game="Anime Zero" aria-label="เลือก Anime Zero">
+          <div class="game-cover"><img src="assets/anime-zero.png" alt="Anime Zero game cover"><span class="game-tag"><span class="dot pulse"></span> AVAILABLE SERVICE</span><span class="game-cover-count">01 / GAME</span></div>
+          <div class="game-card-body"><div class="game-card-heading"><h3 class="game-card-title">Anime Zero</h3><span class="game-card-arrow">↗</span></div><p class="game-card-desc">ติดตามงานฟาร์ม ตัวละคร ไอเทม และความคืบหน้าของบัญชี Anime Zero ได้ในหน้าเดียว</p><div class="game-card-foot"><span><strong>ANIME ZERO</strong> · FARMING LOG</span><span class="choose-label">เลือกเกม <span aria-hidden="true">→</span></span></div></div>
+        </button>
+
+      </div>
+      <div class="picker-bottom"><span class="secure-note"><span>●</span> PRIVATE ACCOUNT DATA · USERNAMES ARE MASKED</span><span>เลือก Anime Zero เพื่อดูรายการที่เกี่ยวข้อง</span></div>
+    </section>
+    <div id="dashboardWorkspace" class="hidden">
+      <div class="workspace-topline"><div class="selected-game-label"><span class="mini-game-mark">◈</span><span id="selectedGameName">Anime Zero</span><span class="mini-chip status-done">GAME LOG</span></div><button class="change-game-btn" id="changeGame">← เปลี่ยนเกม</button></div>
+    <div class="stats-grid" id="statsGrid"></div>
+    <div id="dashboardOffline" class="offline-banner hidden"><span>!</span><span>เชื่อมต่อเครื่องฟาร์มไม่ได้ — กำลังแสดงข้อมูลล่าสุดที่บันทึกไว้</span><button class="text-btn" id="retryConnection">ลองอีกครั้ง</button></div>
+    <div class="toolbar">
+      <div class="search-wrap"><span class="search-icon">⌕</span><input class="field" id="accountSearch" placeholder="ค้นหาบัญชี / เกม..." aria-label="ค้นหาบัญชี"></div>
+      <select class="field select-field" id="gameFilter" aria-label="กรองเกม"><option value="all">ทุกเกม</option><option value="Anime Zero">Anime Zero</option></select>
+      <select class="field select-field" id="statusFilter" aria-label="กรองสถานะ"><option value="all">ทุกสถานะ</option><option value="FARMING">Farming</option><option value="PENDING">Pending</option><option value="DONE">Completed</option><option value="CANCEL">Cancel</option><option value="STALE">Stale</option></select>
+      <div class="view-switch"><button id="gridView" class="active" aria-label="Grid view">▦</button><button id="listView" aria-label="List view">☷</button></div>
+      <div class="updated">อัปเดตล่าสุด <span class="mono" id="lastUpdated">18:24:31</span></div>
+    </div>
+    <div class="accounts-grid" id="accountsGrid"></div>
+    <div class="footer-note"><span>PADUK SHOP / FARMING_SERVICE</span><span>MOCK DATA · AUTO REFRESH 5S</span></div>
+    </div>
+  </section>
+  <section id="detailPage" class="hidden">
+    <div class="page-head"><div><div class="eyebrow">ACCOUNT MONITOR / DETAIL VIEW</div><h1 class="page-title">Farm <span class="shine">Session Detail</span></h1><p class="page-desc">ข้อมูลรอบฟาร์ม สถานะในเกม ตัวละคร ไอเทม และสถิติที่เกี่ยวข้อง</p></div><div class="live-indicator"><span class="dot pulse"></span> SYNC EVERY 5S</div></div>
+    <div class="detail-layout" id="detailLayout"></div>
+  </section>
+  <section id="publicPage" class="hidden">
+    <div class="page-head"><div><div class="eyebrow">CUSTOMER PORTAL / READ ONLY</div><h1 class="page-title">Farm <span class="shine">Progress Report</span></h1><p class="page-desc">หน้ารายงานสำหรับลูกค้า แสดงเฉพาะข้อมูลที่จำเป็นต่อการติดตามงาน</p></div><div class="live-indicator"><span class="dot pulse"></span> AUTO SYNC</div></div>
+    <div id="publicContent"></div>
+  </section>
+  <section id="shopPage" class="hidden">
+    <div class="page-head"><div><div class="eyebrow">SERVICE CATALOG / MOCK</div><h1 class="page-title">เลือกบริการ <span class="shine">Shop</span></h1><p class="page-desc">ตัวอย่างหน้าแคตตาล็อกสำหรับบริการฟาร์ม — ข้อมูลจำลองสำหรับออกแบบ UI</p></div></div>
+    <div class="accounts-grid">
+      <article class="panel" style="padding:20px"><div class="eyebrow">STARTER</div><h2 class="display">ฟาร์มทุกวัน 1 วัน</h2><p class="muted">Anime Zero · ติดตามผลผ่านหน้า log</p><div class="currency-value gold">CUSTOM</div><button class="primary-btn" data-action="shopContact">สอบถามบริการ →</button></article>
+      <article class="panel" style="padding:20px"><div class="eyebrow">ADVANCED</div><h2 class="display">ฟาร์มตามเป้าหมาย</h2><p class="muted">เลือกเป้าหมายและติดตามสถิติการทำงาน</p><div class="currency-value cyan">CUSTOM</div><button class="primary-btn" data-action="shopContact">สอบถามบริการ →</button></article>
+      <article class="panel" style="padding:20px"><div class="eyebrow">SUPPORT</div><h2 class="display">รายงานและติดตามงาน</h2><p class="muted">รับรายงานความคืบหน้าและแจ้งปัญหาผ่าน Ticket</p><div class="currency-value green">INCLUDED</div><button class="primary-btn" data-page="support">ไปหน้า Support →</button></article>
+    </div>
+  </section>
+  <section id="supportPage" class="hidden">
+    <div class="page-head"><div><div class="eyebrow">HELP CENTER / TICKET</div><h1 class="page-title">ต้องการความช่วยเหลือ <span class="shine">Support</span></h1><p class="page-desc">หากสถานะไม่อัปเดตหรือพบปัญหา กรุณาส่งรายงานพร้อมรหัสงาน</p></div></div>
+    <div class="panel" style="padding:20px;max-width:720px"><label class="muted" for="ticketOrder">รหัสงาน</label><input class="field" id="ticketOrder" value="AZ-118" style="margin:6px 0 14px"><label class="muted" for="ticketMessage">รายละเอียด</label><textarea class="field" id="ticketMessage" rows="4" placeholder="อธิบายปัญหาที่พบ..." style="margin:6px 0 14px;resize:vertical"></textarea><button class="primary-btn" id="sendTicket">ส่งคำขอรายงาน →</button></div>
+  </section>
+</main>
+</div>
+<div id="toastHost" aria-live="polite"></div>
+<div id="modalHost"></div>
+<script src="js/live.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

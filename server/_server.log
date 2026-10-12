@@ -1,0 +1,7 @@
+
+  PADUK SHOP Aú LOCALHOST SERVER
+  Web : http://127.0.0.1:3000/
+  API : POST /api/ingest  (from Roblox script)
+        GET  /api/data    (for the web app)
+  Ctrl+C to stop
+
