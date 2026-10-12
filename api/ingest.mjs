@@ -57,9 +57,20 @@ export default async function handler(req, res) {
     }
 
     // --- 2) บันทึก snapshot (payload = live object) ---
+    // แปลง png base64 → data URL (Vercel ไม่มี disk เก็บไฟล์)
+    const liveFixed = JSON.parse(JSON.stringify(live));
+    if (Array.isArray(liveFixed.items)) {
+      for (const it of liveFixed.items) {
+        if (it.png && !it.image) {
+          it.image = "data:image/png;base64," + it.png;
+        }
+        delete it.png;
+      }
+    }
+
     const { error: snapErr } = await supabase
       .from("paduk_snapshots")
-      .insert({ user_id: userId, payload: live });
+      .insert({ user_id: userId, payload: liveFixed });
     if (snapErr) throw snapErr;
 
     // --- 3) upsert heartbeat ลง paduk_agents ---
